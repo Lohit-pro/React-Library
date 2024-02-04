@@ -1,5 +1,5 @@
 // FAKE DATA
-export const books = [
+export const Books = [
     {
       id: 1,
       title: "Crack the Coding Interview",
@@ -13,7 +13,7 @@ export const books = [
       title: "Atomic Habits",
       url: "assets/books/atomic habits.jpg",
       originalPrice: 39,
-      salePrice: null,
+      salePrice: 13,
       rating: 5,
     },
     {
@@ -21,7 +21,7 @@ export const books = [
       title: "Can't Hurt Me",
       url: "assets/books/david goggins.jpeg",
       originalPrice: 29,
-      salePrice: null,
+      salePrice: 13,
       rating: 5,
     },
     {
@@ -37,7 +37,7 @@ export const books = [
       title: "The 10X Rule",
       url: "assets/books/book-1.jpeg",
       originalPrice: 32,
-      salePrice: null,
+      salePrice: 13,
       rating: 5,
     },
     {
@@ -77,7 +77,7 @@ export const books = [
       title: "The 5 Second Rule",
       url: "hassets/books/book-6.jpeg",
       originalPrice: 40,
-      salePrice: null,
+      salePrice: 13,
       rating: 5,
     },
     {

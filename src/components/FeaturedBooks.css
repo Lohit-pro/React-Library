@@ -5,11 +5,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    /* text-align: center; */
     padding-top: 2rem;
 }
 
 .featuredbooks_text{
     font-size: 2rem;
     padding-bottom: 2rem;
+}
+
+.featuredbooks_books{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    text-align: start;
 }
