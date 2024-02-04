@@ -1,0 +1,19 @@
+.header_container{
+    /* border: solid 2px black; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0rem 1.5rem 0rem;
+    background-color: #aa7ad43a;
+}
+
+.header_left{
+    margin-left: 12rem;
+    cursor: pointer;
+}
+
+.header_right{
+    margin-right: 12rem;
+    font-size: large;
+}

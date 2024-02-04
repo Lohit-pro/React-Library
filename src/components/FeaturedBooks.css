@@ -1,0 +1,15 @@
+.featuredbooks_container{
+    width: 100%;
+    background-color: #aa7ad43a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.featuredbooks_text{
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
