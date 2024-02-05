@@ -1,30 +1,27 @@
 import React from "react";
-import "./FeaturedBooks.css";
-import { Books } from "../data/Data.js";
+import { Books } from "../data/Data";
+import "./DiscountedBooks.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-function FeaturedBooks() {
-  // Data.js
-
+function DiscountedBooks() {
   const generateStars = (rating) => {
     const roundedRating = Math.round(rating);
     return Array.from({ length: 5 }, (_, index) => index < roundedRating);
   };
 
   return (
-    <div className="featuredbooks_container container">
-      <div className="featuredbooks_text">
-        Featured <span className="text-[#7342d6]">Books</span>
+    <div className="discountedbooks_container container">
+      <div className="discountedbooks_text">
+        Discounted <span className="text-[#7342d6]">Books</span>
       </div>
-      <div className="featuredbooks_books">
-        {Books.filter((book) => book.rating === 5)
-          .slice(0, 4)
-          .map((book) => (
+      <div className="discountedbooks_books">
+        {Books.map((book) => (
+          book.salePrice === null ? null : (
             <div key={book.id}>
-              <img src={book.url} alt="book_img" />
-              <div>{book.title}</div>
-              <div>
+              <img className="discounted_books_images" src={book.url} alt="book_img" />
+              <div className="discountedbooks_name">{book.title}</div>
+              <div className="star-rating">
                 {generateStars(book.rating).map((isFilled, index) => (
                   <FontAwesomeIcon
                     key={index}
@@ -43,10 +40,11 @@ function FeaturedBooks() {
                 )
               }
             </div>
-          ))}
+          )
+        ))}
       </div>
     </div>
   );
 }
 
-export default FeaturedBooks;
+export default DiscountedBooks;

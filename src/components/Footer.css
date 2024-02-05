@@ -1,0 +1,23 @@
+.footer_container{
+    width: 100%;
+    background-color: #242424;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 0rem;
+}
+
+.footer_navs{
+    margin: 1rem 0rem;
+}
+
+.footer_navs > button {
+    padding: 0rem 0.75rem;
+    transition: transform 0.3s ease-out;
+}
+.footer_navs > button:hover {
+    transform: translateY(-15%);
+}

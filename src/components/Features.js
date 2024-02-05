@@ -32,7 +32,7 @@ function Features() {
         </svg>
       </div>
       <div className="features_text">
-        Why choose <span className="text-[#7e22ce]">Library</span>
+        Why choose <span className="text-[#7342d6]">Library</span>
       </div>
       <div className="features">
         <div className="features_items">
@@ -40,9 +40,9 @@ function Features() {
             <FontAwesomeIcon
               icon="fa-solid fa-bolt"
               style={{
-                color: "#7e22ce",
+                color: "#7342d6",
                 height: "2.25rem",
-                border: "solid 2px #7e22ce81",
+                border: "solid 2px #7342d681",
                 borderRadius: "0.25rem",
                 padding: "1.75rem",
               }}
@@ -56,9 +56,9 @@ function Features() {
             <FontAwesomeIcon
               icon="fa-solid fa-book-open"
               style={{
-                color: "#7e22ce",
+                color: "#7342d6",
                 height: "2.25rem",
-                border: "solid 2px #7e22ce81",
+                border: "solid 2px #7342d681",
                 borderRadius: "0.25rem",
                 padding: "1.75rem",
               }}
@@ -72,9 +72,9 @@ function Features() {
             <FontAwesomeIcon
               icon="fa-solid fa-tags"
               style={{
-                color: "#7e22ce",
+                color: "#7342d6",
                 height: "2.25rem",
-                border: "solid 2px #7e22ce81",
+                border: "solid 2px #7342d681",
                 borderRadius: "0.25rem",
                 padding: "1.75rem",
               }}
