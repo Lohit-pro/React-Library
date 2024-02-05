@@ -21,7 +21,7 @@ function FeaturedBooks() {
         {Books.filter((book) => book.rating === 5)
           .slice(0, 4)
           .map((book) => (
-            <div key={book.id}>
+            <div key={book.id} className="featuredbooks_book">
               <img src={book.url} alt="book_img" />
               <div>{book.title}</div>
               <div>

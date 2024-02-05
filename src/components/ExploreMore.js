@@ -1,5 +1,6 @@
 import React from "react";
 import './ExploreMore.css'
+import { Link } from "react-router-dom";
 
 function ExploreMore(){
     return (
@@ -7,7 +8,7 @@ function ExploreMore(){
             <div className="exploremore_text">
                 Explore More <span className="text-[#7342d6]">Books</span>
             </div>
-            <button className="exploremore_button">Explore more!</button>
+            <Link to="/books" className="exploremore_button">Explore more!</Link>
         </div>
     )
 }

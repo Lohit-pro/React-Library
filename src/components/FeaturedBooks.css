@@ -25,3 +25,12 @@
     margin-top: 1rem;
     padding-bottom: 2rem;
 }
+
+.featuredbooks_book{
+    transition: all 0.3s ease-out;
+}
+
+.featuredbooks_book:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+}

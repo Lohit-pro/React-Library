@@ -18,7 +18,7 @@ function DiscountedBooks() {
       <div className="discountedbooks_books">
         {Books.map((book) => (
           book.salePrice === null ? null : (
-            <div key={book.id}>
+            <div key={book.id} className="discountedbooks_book">
               <img className="discounted_books_images" src={book.url} alt="book_img" />
               <div className="discountedbooks_name">{book.title}</div>
               <div className="star-rating">
