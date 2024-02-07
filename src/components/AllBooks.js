@@ -1,6 +1,7 @@
 import React from "react";
 import "./AllBooks.css";
 import { Books } from "../data/Data";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
@@ -16,7 +17,7 @@ function AllBooks() {
       </div>
       <div className="allbooks_books">
         {Books.map((book) => (
-          <div key={book.id} className="allbooks_book">
+          <Link to={`/books/${book.id}`} key={book.id} className="allbooks_book">
             <img src={book.url} alt="book_img" />
             <div className="allbooks_name">{book.title}</div>
             <div>
@@ -40,7 +41,7 @@ function AllBooks() {
                 ${book.salePrice}
               </div>
             )}
-          </div>
+          </Link>
         ))}
       </div>
     </div>

@@ -1,0 +1,58 @@
+.bookinfo_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.bookinfo_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 12rem;
+    gap: 20px;
+}
+
+.discountedbooks_text{
+    font-size: 2rem;
+}
+
+.bookinfo{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bookinfo_left{
+    padding-left: 5rem;
+    padding-right: 2rem;
+}
+.bookinfo_right{
+    width: 60%;
+}
+
+.bookinfo_left > img{
+    width: 300px;
+    height: auto;
+}
+
+.bookinfo_title{
+    font-size: 1.75rem;
+}
+
+.addtocart_button{
+    border: solid 2px #7342d6;
+    border-radius: 0.25rem;
+    background-color: #7342d6;
+    color: white;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.5rem;
+    line-height: normal;
+}

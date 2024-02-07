@@ -4,7 +4,7 @@ import './Footer.css'
 function Footer(){
     return(
         <div className="footer_container container">
-            <img src="logo-white.png" alt="logo" className="h-14"></img>
+            <img src="/logo-white.png" alt="logo" className="h-14"></img>
             <div className="footer_navs">
                 <button>Home</button>
                 <button>About</button>

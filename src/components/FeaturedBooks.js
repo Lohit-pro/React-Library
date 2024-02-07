@@ -1,12 +1,11 @@
 import React from "react";
 import "./FeaturedBooks.css";
+import { Link } from "react-router-dom";
 import { Books } from "../data/Data.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function FeaturedBooks() {
-  // Data.js
-
   const generateStars = (rating) => {
     const roundedRating = Math.round(rating);
     return Array.from({ length: 5 }, (_, index) => index < roundedRating);
@@ -21,7 +20,11 @@ function FeaturedBooks() {
         {Books.filter((book) => book.rating === 5)
           .slice(0, 4)
           .map((book) => (
-            <div key={book.id} className="featuredbooks_book">
+            <Link
+              to={`/books/${book.id}`}
+              key={book.id}
+              className="featuredbooks_book"
+            >
               <img src={book.url} alt="book_img" />
               <div>{book.title}</div>
               <div>
@@ -35,14 +38,17 @@ function FeaturedBooks() {
                   />
                 ))}
               </div>
-              {
-                book.salePrice === null ? (
+              {book.salePrice === null ? (
                 <div>${book.originalPrice}</div>
-                ) : (
-                   <div><span className="line-through text-gray-400">${book.originalPrice}</span> ${book.salePrice}</div>
-                )
-              }
-            </div>
+              ) : (
+                <div>
+                  <span className="line-through text-gray-400">
+                    ${book.originalPrice}
+                  </span>{" "}
+                  ${book.salePrice}
+                </div>
+              )}
+            </Link>
           ))}
       </div>
     </div>
