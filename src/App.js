@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Books from "./pages/Books";
 import Cart from "./pages/Cart";
 import BookInfo from "./pages/BookInfo";
+import Error404 from "./pages/Error404";
 
 library.add(fas);
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/books" element={<Books />} />
         <Route path="/books/:id" element={<BookInfo />} />
         <Route path="/cart" element={<Cart />} />
+        <Route component={<Error404 />} />
       </Routes>
     </div>
   );

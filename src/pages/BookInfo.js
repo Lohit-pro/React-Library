@@ -7,13 +7,14 @@ import DiscountedBooks from "../components/DiscountedBooks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong, faStar } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom"; // Import useParams to access URL parameters
+import Error404 from "./Error404";
 
 function BookInfo() {
   const { id } = useParams(); // Get the book id from URL parameters
   const selectedBook = Books.find((book) => book.id === parseInt(id));
 
   if (!selectedBook) {
-    return <div>Book not found!</div>;
+    return <Error404 />;
   }
 
   const generateStars = (rating) => {
@@ -51,9 +52,16 @@ function BookInfo() {
               ))}
             </div>
             <div>
-              {selectedBook.salePrice
-                ? "$" + selectedBook.salePrice
-                : "$" + selectedBook.originalPrice}
+              {selectedBook.salePrice ? (
+                <>
+                  <span className="line-through text-gray-400">
+                    {`$` + selectedBook.originalPrice}
+                  </span>{" "}
+                  {`$` + selectedBook.salePrice}
+                </>
+              ) : (
+                "$" + selectedBook.originalPrice
+              )}
             </div>
             <div className="pt-5">
               <p className="text-[1.5rem]">Summary</p>
