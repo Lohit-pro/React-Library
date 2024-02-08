@@ -181,7 +181,7 @@ function Cart(props) {
           <div className="cart_empty">
             <img
               className="cart_empty_logo"
-              src="/assets/empty_cart.svg"
+              src="assets/empty_cart.svg"
               alt="empty_cart"
             />
             You don't have any books in your cart!
