@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Features from "../components/Features";
@@ -8,9 +8,15 @@ import DiscountedBooks from "../components/DiscountedBooks";
 import ExploreMore from "../components/ExploreMore";
 
 function Home() {
+
+  useEffect(() => {
+    const targetSection = document.getElementById("Home".toLowerCase());
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
-    <div>
-      <Header />
+    <div id={"Home".toLowerCase()}>
+      <Header cartLength={null} />
       <Dashboard />
       <Features />
       <FeaturedBooks />

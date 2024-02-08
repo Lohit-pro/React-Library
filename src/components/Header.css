@@ -17,3 +17,24 @@
     margin-right: 12rem;
     font-size: large;
 }
+
+.cart_icn{
+    position: relative;
+    height: 1.75rem;
+}
+
+.cart_item_number {
+    position: absolute;
+    right: 11.75rem;
+    top: 3.25rem;
+    width: 1rem; /* Adjust width and height to desired size */
+    height: 1rem; /* Adjust width and height to desired size */
+    font-size: 0.75rem;
+    color: white;
+    border: solid 2px red;
+    border-radius: 50%; /* Make it a perfect circle */
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

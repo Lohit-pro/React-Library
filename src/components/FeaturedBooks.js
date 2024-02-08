@@ -12,7 +12,7 @@ function FeaturedBooks() {
   };
 
   return (
-    <div className="featuredbooks_container container">
+    <div className="featuredbooks_container container" id={"Featuredbooks".toLowerCase()}>
       <div className="featuredbooks_text">
         Featured <span className="text-[#7342d6]">Books</span>
       </div>

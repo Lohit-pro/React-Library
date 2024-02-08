@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 function Books(){
     return(
         <div>
-            <Header />
+            <Header cartLength={null} />
             <AllBooks />
             <Footer />
         </div>

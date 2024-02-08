@@ -13,6 +13,8 @@ function Cart(props) {
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    const targetSection = document.getElementById("Cart".toLowerCase());
+    targetSection.scrollIntoView({ behavior: "smooth" });
   }, [cartItems]);
 
   // Function to handle removal of a book from the cart
@@ -32,13 +34,13 @@ function Cart(props) {
       return {
         subtotal: subtotal.toFixed(1),
         tax: tax.toFixed(1),
-        total: total.toFixed(1)
+        total: total.toFixed(1),
       };
     }
     return {
       subtotal: 0,
       tax: 0,
-      total: 0
+      total: 0,
     };
   };
 
@@ -60,8 +62,8 @@ function Cart(props) {
 
   return (
     <>
-      <Header />
-      <div className="cart_container">
+      <Header cartLength={cartItems.length} />
+      <div className="cart_container" id={"Cart".toLowerCase()}>
         <div className="cart_nav">
           <FontAwesomeIcon
             icon={faArrowLeftLong}
@@ -106,7 +108,9 @@ function Cart(props) {
                       min="1"
                       max="99"
                       defaultValue={item.quantity || 1}
-                      onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value))}
+                      onChange={(e) =>
+                        handleQuantityChange(item.id, parseInt(e.target.value))
+                      }
                     ></input>
                   </div>
                   <div className="cart_price">
@@ -120,15 +124,53 @@ function Cart(props) {
                 <div className="checkout_details">
                   <div>
                     <div>Subtotal</div>
-                    <div>${cartItems.reduce((acc, item) => acc + parseFloat(calculateSubTotal(item.id, item.quantity || 1).subtotal), 0).toFixed(1)}</div>
+                    <div>
+                      $
+                      {cartItems
+                        .reduce(
+                          (acc, item) =>
+                            acc +
+                            parseFloat(
+                              calculateSubTotal(item.id, item.quantity || 1)
+                                .subtotal
+                            ),
+                          0
+                        )
+                        .toFixed(1)}
+                    </div>
                   </div>
                   <div>
                     <div>Tax</div>
-                    <div>${cartItems.reduce((acc, item) => acc + parseFloat(calculateSubTotal(item.id, item.quantity || 1).tax), 0).toFixed(1)}</div>
+                    <div>
+                      $
+                      {cartItems
+                        .reduce(
+                          (acc, item) =>
+                            acc +
+                            parseFloat(
+                              calculateSubTotal(item.id, item.quantity || 1).tax
+                            ),
+                          0
+                        )
+                        .toFixed(1)}
+                    </div>
                   </div>
                   <div>
                     <div>Total</div>
-                    <div>${cartItems.reduce((acc, item) => acc + parseFloat(calculateSubTotal(item.id, item.quantity || 1).total), 0).toFixed(1)}</div>
+                    <div>
+                      $
+                      {cartItems
+                        .reduce(
+                          (acc, item) =>
+                            acc +
+                            parseFloat(
+                              calculateSubTotal(item.id, item.quantity || 1)
+                                .total
+                            ),
+                          0
+                        )
+                        .toFixed(1)}
+                    </div>
                   </div>
                 </div>
                 <button onClick={handleCheckout}>Proceed to checkout</button>

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-function Header() {
+function Header(props) {
   return (
     <div className="header_container container">
       <Link to="/" className="header_left">
@@ -12,12 +12,20 @@ function Header() {
         <Link to="/" className="home_btn hover:underline hover:text-[#7342d6]">
           Home
         </Link>
-        <Link to="/books" className="books_btn hover:underline hover:text-[#7342d6]">
+        <Link
+          to="/books"
+          className="books_btn hover:underline hover:text-[#7342d6]"
+        >
           Books
         </Link>
         <Link to="/cart">
-          <img src="/assets/cart.png" alt="cart_icon" className="h-7"></img>
+          <img src="/assets/cart.png" alt="cart_icon" className="cart_icn"></img>
         </Link>
+        {props.cartLength !== 0 && props.cartLength !== null ? (
+          <div className="cart_item_number">{props.cartLength}</div>
+        ) : (
+          null
+        )}
       </div>
     </div>
   );

@@ -41,7 +41,7 @@ function BookInfo() {
 
   return (
     <div>
-      <Header />
+      <Header cartLength={null} />
       <div className="bookinfo_container container">
         <div className="bookinfo_nav">
           <FontAwesomeIcon

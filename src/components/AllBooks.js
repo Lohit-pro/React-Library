@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./AllBooks.css";
 import { Books } from "../data/Data";
 import { Link } from "react-router-dom";
@@ -6,12 +6,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function AllBooks() {
+
+  useEffect(() => {
+    const targetSection = document.getElementById("AllBooks".toLowerCase());
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   const generateStars = (rating) => {
     const roundedRating = Math.round(rating);
     return Array.from({ length: 5 }, (_, index) => index < roundedRating);
   };
   return (
-    <div className="allbooks_container container">
+    <div className="allbooks_container container" id={"AllBooks".toLowerCase()}>
       <div className="allbooks_text">
         All <span className="text-[#7342d6]">Books</span>
       </div>
