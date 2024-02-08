@@ -6,7 +6,7 @@ function Header() {
   return (
     <div className="header_container container">
       <Link to="/" className="header_left">
-        <img src="/logo.png" alt="logo" className="h-14"></img>
+        <img src="/logo.png" alt="logo" className="h-12"></img>
       </Link>
       <div className="header_right flex space-x-10">
         <Link to="/" className="home_btn hover:underline hover:text-[#7342d6]">

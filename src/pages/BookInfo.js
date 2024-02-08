@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./BookInfo.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -6,12 +6,26 @@ import { Books } from "../data/Data";
 import DiscountedBooks from "../components/DiscountedBooks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong, faStar } from "@fortawesome/free-solid-svg-icons";
-import { useParams } from "react-router-dom"; // Import useParams to access URL parameters
+import { Link, useParams } from "react-router-dom"; // Import useParams to access URL parameters
 import Error404 from "./Error404";
+import Cart from "./Cart";
 
 function BookInfo() {
   const { id } = useParams(); // Get the book id from URL parameters
   const selectedBook = Books.find((book) => book.id === parseInt(id));
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCartItems = localStorage.getItem("cartItems");
+    return savedCartItems ? JSON.parse(savedCartItems) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  function handelAddToCartClick() {
+    setCartItems([...cartItems, selectedBook]); // Add selectedBook to cartItems array
+    console.log("from BI:", cartItems);
+  }
 
   if (!selectedBook) {
     return <Error404 />;
@@ -21,6 +35,9 @@ function BookInfo() {
     const roundedRating = Math.round(rating);
     return Array.from({ length: 5 }, (_, index) => index < roundedRating);
   };
+
+  // Check if the selected book is already in the cartItems array
+  const isBookInCart = cartItems.find((item) => item.id === selectedBook.id);
 
   return (
     <div>
@@ -66,19 +83,36 @@ function BookInfo() {
             <div className="pt-5">
               <p className="text-[1.5rem]">Summary</p>
               <p className="pt-2 font-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-                repellendus modi odio porro, consequuntur, asperiores minima
-                sint voluptatem at reiciendis ducimus neque provident alias iure
-                nihil explicabo nobis id voluptas.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veniam, repellendus modi odio porro, consequuntur, asperiores
+                minima sint voluptatem at reiciendis ducimus neque provident
+                alias iure nihil explicabo nobis id voluptas.
               </p>
               <p className="pt-2 font-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-                repellendus modi odio porro, consequuntur, asperiores minima
-                sint voluptatem at reiciendis ducimus neque provident alias iure
-                nihil explicabo nobis id voluptas.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veniam, repellendus modi odio porro, consequuntur, asperiores
+                minima sint voluptatem at reiciendis ducimus neque provident
+                alias iure nihil explicabo nobis id voluptas.
               </p>
             </div>
-            <button className="addtocart_button">Add to cart</button>
+            <div className="bookinfo_buttons">
+              {isBookInCart ? (
+                <Link to="/cart" className="addtocart_button">
+                  Checkout
+                </Link>
+              ) : (
+                <button
+                  className="addtocart_button"
+                  onClick={handelAddToCartClick}
+                >
+                  Add to cart
+                </button>
+              )}
+
+              <div className="hidden">
+                <Cart props={cartItems} />
+              </div>
+            </div>
           </div>
         </div>
       </div>
