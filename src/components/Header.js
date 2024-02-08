@@ -6,9 +6,9 @@ function Header(props) {
   return (
     <div className="header_container container">
       <Link to="/" className="header_left">
-        <img src="/logo.png" alt="logo" className="h-12"></img>
+        <img src="/logo.png" alt="logo" className="logo"></img>
       </Link>
-      <div className="header_right flex space-x-10">
+      <div className="header_right flex space-x-8">
         <Link to="/" className="home_btn hover:underline hover:text-[#7342d6]">
           Home
         </Link>

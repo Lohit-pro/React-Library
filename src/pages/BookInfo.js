@@ -46,10 +46,10 @@ function BookInfo() {
         <div className="bookinfo_nav">
           <FontAwesomeIcon
             icon={faArrowLeftLong}
-            className="h-7 cursor-pointer"
+            className="fa-arrow_left"
             onClick={() => window.history.back()} // Use window.history.back() to go back to the previous page
           />
-          <div className="discountedbooks_text">Book Info</div>
+          <div className="bookinfo_text">Book Info</div>
         </div>
         <div className="bookinfo">
           <div className="bookinfo_left">

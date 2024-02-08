@@ -1,55 +1,129 @@
-.bookinfo_container{
+@media screen and (max-width: 550px) {
+  .bookinfo_container {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-}
+  }
 
-.bookinfo_nav{
+  .bookinfo_nav {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    gap: 20px;
+  }
+
+  .fa-arrow_left {
+    height: 1.5rem /* 28px */;
+  }
+
+  .bookinfo_text {
+    font-size: 1.5rem;
+  }
+
+  .bookinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bookinfo_right {
+    width: 80%;
+  }
+
+  .bookinfo_left > img {
+    width: 200px;
+    height: auto;
+  }
+
+  .bookinfo_title {
+    margin-top: 1rem;
+    font-size: 1.75rem;
+  }
+
+  .bookinfo_buttons {
+    display: flex;
+  }
+
+  .addtocart_button {
+    border: solid 2px #7342d6;
+    border-radius: 0.25rem;
+    background-color: #7342d6;
+    color: white;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+}
+@media screen and (min-width: 551px) {
+  .bookinfo_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .bookinfo_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     margin-left: 12rem;
     gap: 20px;
-}
+  }
 
-.discountedbooks_text{
+  .fa-arrow_left {
+    height: 1.75rem /* 28px */;
+    cursor: pointer;
+  }
+
+  .bookinfo_text {
     font-size: 2rem;
-}
+  }
 
-.bookinfo{
+  .bookinfo {
     display: flex;
     justify-content: space-between;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-}
+  }
 
-.bookinfo_left{
+  .bookinfo_left {
     padding-left: 5rem;
     padding-right: 2rem;
-}
-.bookinfo_right{
+  }
+  .bookinfo_right {
     width: 60%;
-}
+  }
 
-.bookinfo_left > img{
+  .bookinfo_left > img {
     width: 300px;
     height: auto;
-}
+  }
 
-.bookinfo_title{
+  .bookinfo_title {
     font-size: 1.75rem;
-}
+  }
 
-.bookinfo_buttons{
+  .bookinfo_buttons {
     display: flex;
-}
+  }
 
-.addtocart_button{
+  .addtocart_button {
     border: solid 2px #7342d6;
     border-radius: 0.25rem;
     background-color: #7342d6;
@@ -60,4 +134,5 @@
     padding: 0.5rem 0.75rem;
     font-size: 1.5rem;
     line-height: normal;
+  }
 }

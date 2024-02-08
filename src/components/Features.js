@@ -47,8 +47,8 @@ function Features() {
                 padding: "1.75rem",
               }}
             />
-            <h1 className="text-2xl mt-5 mb-3">Easy and Quick</h1>
-            <h2 className="text-[1rem] font-extralight">
+            <h1 className="feature_text">Easy and Quick</h1>
+            <h2 className="feature_subtext">
               Get access to the book you purchased online instantly
             </h2>
           </div>
@@ -63,8 +63,8 @@ function Features() {
                 padding: "1.75rem",
               }}
             />
-            <h1 className="text-2xl mt-5 mb-3">10,000+ Books</h1>
-            <h2 className="text-[1rem] font-extralight">
+            <h1 className="feature_text">10,000+ Books</h1>
+            <h2 className="feature_subtext">
               Library has books in all your favorite categories
             </h2>
           </div>
@@ -79,8 +79,8 @@ function Features() {
                 padding: "1.75rem",
               }}
             />
-            <h1 className="text-2xl mt-5 mb-3">Affordable</h1>
-            <h2 className="text-[1rem] font-extralight">
+            <h1 className="feature_text">Affordable</h1>
+            <h2 className="feature_subtext">
               Get your hands on populare books for as little as $10
             </h2>
           </div>

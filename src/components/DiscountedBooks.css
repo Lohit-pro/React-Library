@@ -1,39 +1,88 @@
-.discountedbooks_container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
+@media screen and (max-width: 550px) {
+    .discountedbooks_container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* padding-top: 2rem;
+        padding-bottom: 2rem; */
+    }
+    
+    .discountedbooks_text{
+        font-size: 1.75rem;
+        padding-bottom: 1.5rem;
+        padding-top: 1.75rem;
+    }
+    
+    .discountedbooks_books{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+        /* align-items: center; */
+        text-align: start;
+        font-size: 1rem;
+        padding-bottom: 2rem;
+    }
+    
+    .discountedbooks_book{
+        margin-bottom: 2rem;
+        transition: all 0.3s ease-out;    
+    }
 
-.discountedbooks_text{
-    font-size: 2.5rem;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    .discountedbooks_book > img{
+        height: 15rem;
+    }
+    
+    /* .discountedbooks_book:hover{
+        cursor: pointer;
+        transform: translateY(-10px);
+    } */
+    
+    .discountedbooks_name{
+        width: 8rem;
+        margin-top: 0.5rem;
+    }
 }
-
-.discountedbooks_books{
-    padding-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    gap: 50px;
-}
-
-.discountedbooks_book{
-    transition: all 0.3s ease-out;
-}
-
-.discountedbooks_book:hover{
-    cursor: pointer;
-    transform: translateY(-10px);
-}
-
-.discountedbooks_name{
-    width: 13rem;
-    margin-top: 0.5rem;
+@media screen and (min-width: 551px) {
+    .discountedbooks_container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .discountedbooks_text{
+        font-size: 2.5rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+    
+    .discountedbooks_books{
+        padding-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 50px;
+    }
+    
+    .discountedbooks_book{
+        transition: all 0.3s ease-out;
+    }
+    
+    .discountedbooks_book:hover{
+        cursor: pointer;
+        transform: translateY(-10px);
+    }
+    
+    .discountedbooks_name{
+        width: 13rem;
+        margin-top: 0.5rem;
+    }
 }
