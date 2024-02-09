@@ -1,56 +1,5 @@
 @media screen and (max-width: 550px) {
-    .dashboard_container {
-        /* border: solid 2px red; */
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem 0rem;
-        background-color: #aa7ad43a;
-      }
-    
-      .dash_text {
-        /* border: solid 2px blue; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 90%;
-        margin-top: 1.5rem;
-      }
-    
-      .dash_text > div {
-        font-size: 2.5rem;
-        line-height: normal;
-      }
-      .dash_text > h1 {
-        margin: 1rem 0rem;
-        font-size: 1.5rem;
-        line-height: normal;
-      }
-      .dash_text > button {
-        margin: 1.5rem 0rem;
-        color: white;
-        background-color: #7342d6;
-        border: solid 2px #7342d6;
-        border-radius: 0.25rem;
-        padding: 0.5rem 0.75rem;
-        font-size: 1.5rem;
-        line-height: normal;
-      }
-    
-      .dashboard_img {
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        height: 17rem;
-      }
-}
-
-@media screen and (min-width: 551px) {
   .dashboard_container {
-    /* border: solid 2px red; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -61,7 +10,54 @@
   }
 
   .dash_text {
-    /* border: solid 2px blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin-top: 1.5rem;
+  }
+
+  .dash_text > div {
+    font-size: 2.5rem;
+    line-height: normal;
+  }
+  .dash_text > h1 {
+    margin: 1rem 0rem;
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+  .dash_text > button {
+    margin: 1.5rem 0rem;
+    color: white;
+    background-color: #7342d6;
+    border: solid 2px #7342d6;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+
+  .dashboard_img {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height: 17rem;
+  }
+}
+
+@media screen and (min-width: 551px) {
+  .dashboard_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0rem;
+    background-color: #aa7ad43a;
+  }
+
+  .dash_text {
     display: flex;
     flex-direction: column;
     justify-content: center;

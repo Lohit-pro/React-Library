@@ -1,22 +1,22 @@
-.error404_container{
-    width: 100%;
-    /* height: 100%; */
-    margin-top: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
+.error404_container {
+  width: 100%;
+
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }
 
-.error404_goback{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 4.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
+.error404_goback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 4.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
 }
 
-.error404_goback:hover{
-    transform: translateX(-10%);
+.error404_goback:hover {
+  transform: translateX(-10%);
 }

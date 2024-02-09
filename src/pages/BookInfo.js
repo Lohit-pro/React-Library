@@ -6,12 +6,12 @@ import { Books } from "../data/Data";
 import DiscountedBooks from "../components/DiscountedBooks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong, faStar } from "@fortawesome/free-solid-svg-icons";
-import { Link, useParams } from "react-router-dom"; // Import useParams to access URL parameters
+import { Link, useParams } from "react-router-dom";
 import Error404 from "./Error404";
 import Cart from "./Cart";
 
 function BookInfo() {
-  const { id } = useParams(); // Get the book id from URL parameters
+  const { id } = useParams();
   const selectedBook = Books.find((book) => book.id === parseInt(id));
   const [cartItems, setCartItems] = useState(() => {
     const savedCartItems = localStorage.getItem("cartItems");
@@ -23,7 +23,7 @@ function BookInfo() {
   }, [cartItems]);
 
   function handelAddToCartClick() {
-    setCartItems([...cartItems, selectedBook]); // Add selectedBook to cartItems array
+    setCartItems([...cartItems, selectedBook]);
     console.log("from BI:", cartItems);
   }
 
@@ -36,7 +36,6 @@ function BookInfo() {
     return Array.from({ length: 5 }, (_, index) => index < roundedRating);
   };
 
-  // Check if the selected book is already in the cartItems array
   const isBookInCart = cartItems.find((item) => item.id === selectedBook.id);
 
   return (
@@ -47,7 +46,7 @@ function BookInfo() {
           <FontAwesomeIcon
             icon={faArrowLeftLong}
             className="fa-arrow_left"
-            onClick={() => window.history.back()} // Use window.history.back() to go back to the previous page
+            onClick={() => window.history.back()}
           />
           <div className="bookinfo_text">Book Info</div>
         </div>
@@ -83,16 +82,16 @@ function BookInfo() {
             <div className="pt-5">
               <p className="text-[1.5rem]">Summary</p>
               <p className="pt-2 font-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veniam, repellendus modi odio porro, consequuntur, asperiores
-                minima sint voluptatem at reiciendis ducimus neque provident
-                alias iure nihil explicabo nobis id voluptas.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+                repellendus modi odio porro, consequuntur, asperiores minima
+                sint voluptatem at reiciendis ducimus neque provident alias iure
+                nihil explicabo nobis id voluptas.
               </p>
               <p className="pt-2 font-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veniam, repellendus modi odio porro, consequuntur, asperiores
-                minima sint voluptatem at reiciendis ducimus neque provident
-                alias iure nihil explicabo nobis id voluptas.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+                repellendus modi odio porro, consequuntur, asperiores minima
+                sint voluptatem at reiciendis ducimus neque provident alias iure
+                nihil explicabo nobis id voluptas.
               </p>
             </div>
             <div className="bookinfo_buttons">

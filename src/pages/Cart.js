@@ -17,19 +17,17 @@ function Cart(props) {
     targetSection.scrollIntoView({ behavior: "smooth" });
   }, [cartItems]);
 
-  // Function to handle removal of a book from the cart
   const handleRemoveBook = (id) => {
     const updatedCartItems = cartItems.filter((item) => item.id !== id);
     setCartItems(updatedCartItems);
   };
 
-  // Function to calculate subtotal based on quantity
   const calculateSubTotal = (id, quantity) => {
     const item = cartItems.find((item) => item.id === id);
     if (item) {
       const price = item.salePrice ? item.salePrice : item.originalPrice;
       const subtotal = price * quantity;
-      const tax = 0.05 * subtotal; // 5% tax
+      const tax = 0.05 * subtotal;
       const total = subtotal + tax;
       return {
         subtotal: subtotal.toFixed(1),
@@ -44,7 +42,6 @@ function Cart(props) {
     };
   };
 
-  // Function to handle quantity change
   const handleQuantityChange = (id, quantity) => {
     const updatedCartItems = cartItems.map((item) => {
       if (item.id === id) {
@@ -55,7 +52,6 @@ function Cart(props) {
     setCartItems(updatedCartItems);
   };
 
-  // Function to handle checkout
   const handleCheckout = () => {
     alert("Haven't got around to doing this :(");
   };

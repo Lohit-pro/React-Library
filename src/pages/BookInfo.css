@@ -19,7 +19,7 @@
   }
 
   .fa-arrow_left {
-    height: 1.5rem /* 28px */;
+    height: 1.5rem;
   }
 
   .bookinfo_text {
@@ -86,7 +86,7 @@
   }
 
   .fa-arrow_left {
-    height: 1.75rem /* 28px */;
+    height: 1.75rem;
     cursor: pointer;
   }
 
