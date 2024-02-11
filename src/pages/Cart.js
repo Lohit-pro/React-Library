@@ -58,8 +58,8 @@ function Cart(props) {
 
   return (
     <>
-      <Header cartLength={cartItems.length} />
-      <div className="cart_container" id={"Cart".toLowerCase()}>
+      <div id={"Cart".toLowerCase()}><Header cartLength={cartItems.length} /></div>
+      <div className="cart_container">
         <div className="cart_nav">
           <FontAwesomeIcon
             icon={faArrowLeftLong}

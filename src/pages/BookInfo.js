@@ -20,7 +20,9 @@ function BookInfo() {
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }, [cartItems]);
+    const targetSection = document.getElementById("bookinfo_header".toLowerCase())
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  }, [cartItems, selectedBook]);
 
   function handelAddToCartClick() {
     setCartItems([...cartItems, selectedBook]);
@@ -40,7 +42,7 @@ function BookInfo() {
 
   return (
     <div>
-      <Header cartLength={null} />
+      <div id={"bookinfo_header".toLowerCase()}><Header cartLength={null} /></div>
       <div className="bookinfo_container container">
         <div className="bookinfo_nav">
           <FontAwesomeIcon
