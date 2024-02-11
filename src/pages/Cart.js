@@ -12,9 +12,12 @@ function Cart(props) {
   });
 
   useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
     const targetSection = document.getElementById("Cart".toLowerCase());
     targetSection.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
   const handleRemoveBook = (id) => {
@@ -58,7 +61,9 @@ function Cart(props) {
 
   return (
     <>
-      <div id={"Cart".toLowerCase()}><Header cartLength={cartItems.length} /></div>
+      <div id={"Cart".toLowerCase()}>
+        <Header cartLength={cartItems.length} />
+      </div>
       <div className="cart_container">
         <div className="cart_nav">
           <FontAwesomeIcon

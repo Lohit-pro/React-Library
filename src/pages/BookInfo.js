@@ -20,9 +20,12 @@ function BookInfo() {
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  useEffect(() => {
     const targetSection = document.getElementById("bookinfo_header".toLowerCase())
     targetSection.scrollIntoView({ behavior: "smooth" });
-  }, [cartItems, selectedBook]);
+  }, [selectedBook]);
 
   function handelAddToCartClick() {
     setCartItems([...cartItems, selectedBook]);
