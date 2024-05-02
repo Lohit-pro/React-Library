@@ -14,12 +14,12 @@ function DiscountedBooks() {
   return (
     <div className="discountedbooks_container container">
       <div className="discountedbooks_text">
-        Discounted <span className="text-[#7342d6]">Books</span>
+        Today's <span className="text-[#7342d6]">Discounts...</span>
       </div>
       <div className="discountedbooks_books">
         {Books.map((book) => (
           book.salePrice === null ? null : (
-            <Link to={`/books/${book.id}`} key={book.id} className="discountedbooks_book">
+            <Link to={`/books/${book.id}`} key={book.id} className="discountedbooks_book hover:text-[#7342d6]">
               <img className="discounted_books_images" src={`/` + book.url} alt="book_img" />
               <div className="discountedbooks_name">{book.title}</div>
               <div className="star-rating">
